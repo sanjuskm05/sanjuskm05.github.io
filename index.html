@@ -1,0 +1,41 @@
+<html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<style> circle {fill: lightblue; stroke: black;} </style>
+<body onload='init()'>
+<svg width=300 height=300>
+</svg>
+<script>
+async function init() {
+const data = await d3.csv('https://flunky.github.io/cars2017.csv');
+var margin = 50;
+var minRange = 0;
+var maxRange = 200;
+var xdomain = [10, 20, 50, 100, 150];
+var ydomain = [10, 20, 50, 100, 150 ];
+var xtickVals = [10, 20, 50, 100];
+
+xaxis = d3.scaleLinear().domain(xdomain).range([0,51.6916-0.5,119.363-0.5,170.555-0.5, 200]);
+axisBottom = d3.axisBottom(xaxis).tickValues(xtickVals).tickFormat(d3.format("~s"));
+yaxis = d3.scaleLinear().domain(ydomain).range([200,149.308-0.5,81.6368-0.5,30.4452-0.5, 0]);
+axisLeft = d3.axisLeft(yaxis).tickValues(xtickVals).tickFormat(d3.format("~s"));
+var cx = d3.scaleLog().domain([10,150]).range([minRange,maxRange]).base(10);
+var cy = d3.scaleLog().domain([10,150]).range([maxRange,minRange]).base(10);
+
+
+d3.select("svg").append("g")
+.attr("transform","translate("+margin+","+margin+")")
+.selectAll("circle").data(data).enter()
+.append("circle")
+.attr("cx", function(d,i) {return cx(d.AverageCityMPG);})
+.attr("cy",function(d, i){return cy(d.AverageHighwayMPG);})
+.attr("r",function(d, i){ return parseInt(d.EngineCylinders)+2;});
+ 
+ d3.select("svg").append("g")
+    .attr("transform", "translate("+margin+","+margin+")")
+    .call(axisLeft);
+ d3.select("svg").append("g")
+    .attr("transform", "translate("+(minRange+margin)+","+(maxRange+margin)+")").call(axisBottom);
+}
+</script>
+</body>
+</html>
