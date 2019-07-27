@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Narrative Visualization assignment">
+    <meta name="author" content="Sanjay Kumar">
+    <link rel="icon" href="icon/me.png">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/starter-template.css" rel="stylesheet">   
+    <link href="css/styles.css" rel="stylesheet">   
+    <title>Sanjay's Home Page</title>
+  </head>
+
+  <body onload='init()'>
+
+     <!-- Fixed navbar -->
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	  <a class="navbar-brand" href="#">Farmers Market</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbar">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="#index.html">Home </a>
+		  </li>
+		  <li class="nav-item active">
+			<a class="nav-link" href="products.html">Scene 1 - Products<span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="paymentType.html" tabindex="-1">Scene 2 - Payment type</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 3 - Social media presence</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Conclusion</a>
+		  </li>
+		</ul>
+	  </div>
+   </nav>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<style> circle {fill: lightblue; stroke: black;} </style>
+<svg width=300 height=1000>
+</svg>
+<script>
+async function init() { 
+    const data = await d3.csv('data/bar-state.csv').then(function(data) {
+        console.log(data[0]);
+        });
+    
+    var margin = 50;
+    var maxRange =800;
+    var xdomain = [0,50];
+    var ydomain = [0,maxRange];
+    var range = [0,maxRange];
+    xaxis = d3.scaleBand().domain(xdomain).range(range);
+    yaxis = d3.scaleBand().domain(ydomain).range([maxRange,0]);
+    
+    var axisLeft = d3.axisLeft(yaxis);
+    var axisBottom = d3.axisBottom(xaxis);
+    var width = 20;
+
+    d3.select("svg").append("g").attr("transform","translate("+margin+","+margin+")")
+    .selectAll("rect")
+    .data(data).enter()
+    .append("rect")
+    .attr("class","rect")
+    .attr("x", function(d,i) { console.log(xaxis(i) + " " + yaxis(d)); return xaxis(i);})
+    .attr("y",function(d, i){return yaxis(d);})
+    .attr("width",width)
+    .attr("height",function(d) {return d;});
+
+    d3.select("svg")
+    .append("g")
+        .attr("transform", "translate("+margin+","+margin+")")
+        .call(axisLeft)
+        .append("g")
+        .attr("transform", "translate(0,"+(maxRange)+")").call(axisBottom);
+
+
+}
+</script>
+</body>    <footer class="footer   text-center">
+    <div class="container">
+      <p class="text-muted"></p>
+      <strong>Author <a href="https://www.linkedin.com/in/sanjaykumarmurudi/"  target="_blank">Sanjay Kumar</a></strong>
+    </div>
+  </footer>
+
+
+</div> <!-- /end of main container -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+</body>
+</html>
