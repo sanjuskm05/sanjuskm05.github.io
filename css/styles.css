@@ -32,10 +32,26 @@
     border-collapse: collapse;
     width: 100%;
   }
-  
-  .table td, .table th {
-    border: 1px solid #ddd;
-    padding: 8px;
+  .table tbody{
+    display:block;
+    width: 100%;
+    overflow: auto;
+    height: 500px;
+  }
+  .table thead tr {
+    display: block;
+  }
+ 
+ .table thead {
+   background: black;
+   color:#fff;
+  }
+ 
+ .table th, .table td {
+   border: 1px solid #ddd;
+   padding: 5px;
+   text-align: left;
+   width: 120px
   }
   
   .table tr:nth-child(even){
