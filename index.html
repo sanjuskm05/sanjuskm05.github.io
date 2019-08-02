@@ -72,7 +72,8 @@
               <p class="lead">    A farmers' market allows growers the opportunity to market directly to consumers without dealing with a food broker. Growers can explain how the food is grown and educate consumers on how to prepare it.
                   Consumers have an opportunity to put a “face” on who is growing the product, which they do not necessarily get from traditional retail food outlets. This form of direct marketing is also regarded as agritourism. Consumers also have the chance to purchase products that originate locally and are promoted as being “fresh.”
               </p>
-              <div id="state-bar-chart-svg"></div>  <!-- main map code goes here -->
+              <div id="map-svg"></div>  <!-- map code goes here -->
+              <div id="state-bar-chart-svg"></div>  <!-- bar code goes here -->
               <p class="lead">The Farmers Market Directory lists markets that feature two or more farm vendors selling 
                 agricultural products directly to customers at a common, recurrent physical location. 
                 Maintained by the Agricultural Marketing Service, the Directory is designed to provide 
@@ -108,7 +109,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.18.0/d3-annotation.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
   <script src='https://d3js.org/d3.v5.min.js'></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="lib/plotMarketonMap.js"></script>
   <script src='lib/d3-tip.js'></script>
   <script src="lib/plotStatebarChart.js"></script>
   <script src="lib/plotMarketCountLineChart.js"></script>

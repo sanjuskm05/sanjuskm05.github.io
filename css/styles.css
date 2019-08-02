@@ -1,5 +1,5 @@
  .states :hover {
-    fill: red;
+    fill: rgb(0, 204, 255);
   }
   
   .state-borders {
