@@ -1,114 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Narrative Visualization assignment">
-    <meta name="author" content="Sanjay Kumar">
-    <link rel="icon" href="icon/me.png">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.18.0/d3-annotation.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">   
-    <link href="css/starter-template.css" rel="stylesheet">   
-    <link href="css/styles.css" rel="stylesheet">   
-    <title>Sanjay's Home Page</title>
-  </head>
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="Narrative Visualization assignment">
+  <meta name="author" content="Sanjay Kumar">
+  <link rel="icon" href="icon/me.png">
 
-  <body>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.18.0/d3-annotation.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/starter-template.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Sanjay's Home Page</title>
+</head>
 
-     <!-- Fixed navbar -->
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-	  <a class="navbar-brand" href="#">Farmers Market</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
+<body>
 
-	  <div class="collapse navbar-collapse" id="navbar">
-		<ul class="navbar-nav mr-auto">
-		  <li class="nav-item active">
-			<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="products.html">Scene 1 - Products</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 2 - Payment type</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 3 - Social media presence</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 4 - Schedule</a>
-		  </li>
-		</ul>
-	  </div>
-   </nav>
-    <!-- Begin page content -->
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Farmers Market</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  	<div class="container"> <!-- start of main container -->
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Scene 1 - Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 2 - Payment type</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 3 - Social media presence</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 4 - Schedule</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Begin page content -->
 
-         <div class="page-header">
-                <h2>National Farmers Market</h2>
-				<h6>- By United States Department of Agriculture</h6>
-         </div>
-         <div id="tooltip-alert" class="alert alert-info hide" role="alert" data-dismiss="alert">
-            <button type="button" class="close"  aria-label="Close">
-            <span aria-hidden="true">&times;</span></button>
-            <strong></strong> Tooltips are available. Use your mouse to hover over any bars on the bar chart to see its tooltip.
-       </div>
-  		<div class="container">
-            <div class="col-lg-12">
-              <p class="lead">A farmers' market allows growers to sell directly to consumers at a given location and time. This marketing method has grown in popularity.
-                  Since USDA’s Agricultural Marketing Service began tracking farmers’ markets in 1994, the number of markets in the United States has grown to 8,720,  an increase of about 7.07 percent from 2013. Total annual sales at U.S. farmers' markets are estimated at $1 billion.
-                  Most farmers' markets are operated on a seasonal basis, opening in the spring and closing in the fall. There are year-round markets and they are generally found on the West Coast, southeast and southwest United States.
-                  To participate, a grower, or vendor, pays a fee or percent of sales for booth space. The market has a manager that coordinates vendors and promotes the market. The market is held in a public location, such as a town square or downtown street on a weekly basis. Some markets are open in the mornings and others are open in late afternoon.
-              </p>
-              <div id="market-count-line-chart-svg"></div> 
-              <p class="lead">    A farmers' market allows growers the opportunity to market directly to consumers without dealing with a food broker. Growers can explain how the food is grown and educate consumers on how to prepare it.
-                  Consumers have an opportunity to put a “face” on who is growing the product, which they do not necessarily get from traditional retail food outlets. This form of direct marketing is also regarded as agritourism. Consumers also have the chance to purchase products that originate locally and are promoted as being “fresh.”
-              </p>
-              <div id="map-svg"></div>  <!-- map code goes here -->
-              <!-- <div id="state-bar-chart-svg"></div> --><!-- bar code goes here -->
-              <p class="lead">The Farmers Market Directory lists markets that feature two or more farm vendors selling 
-                agricultural products directly to customers at a common, recurrent physical location. 
-                Maintained by the Agricultural Marketing Service, the Directory is designed to provide 
-                customers with convenient access to information about farmers market listings to include: 
-                market locations, directions, operating times, product offerings, accepted forms of payment, and more.
-              </p>
-              
-            </div>
-            <div class="container"> <!-- /start of next page container -->
-              <div class="col-lg-12 text-center" >
-               <a href="products.html">
-               <button type="button" class="btn btn-default btn-lg btn-primary">
-                  <i class="fa fa-chevron-right"></i>Next
-               </button></a>
-              </div>
-             </div> <!-- /end of next page container -->
+  <div class="container">
+    <!-- start of main container -->
+
+    <div class="page-header">
+      <h2>National Farmers Market</h2>
+      <h6>- By United States Department of Agriculture</h6>
+    </div>
+    <div id="tooltip-alert" class="alert alert-info hide" role="alert" data-dismiss="alert">
+      <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+      <strong></strong> Tooltips are available. Use your mouse to hover over any bars on the bar chart to see its
+      tooltip.
+    </div>
+    <div class="container">
+      <div class="col-lg-12">
+        <p class="lead">A farmers' market allows growers to sell directly to consumers at a given location and time.
+          This marketing method has grown in popularity.
+          Since USDA’s Agricultural Marketing Service began tracking farmers’ markets in 1994, the number of markets in
+          the United States has grown to 8,720, an increase of about 7.07 percent from 2013. Total annual sales at U.S.
+          farmers' markets are estimated at $1 billion.
+          Most farmers' markets are operated on a seasonal basis, opening in the spring and closing in the fall. There
+          are year-round markets and they are generally found on the West Coast, southeast and southwest United States.
+          To participate, a grower, or vendor, pays a fee or percent of sales for booth space. The market has a manager
+          that coordinates vendors and promotes the market. The market is held in a public location, such as a town
+          square or downtown street on a weekly basis. Some markets are open in the mornings and others are open in late
+          afternoon.
+        </p>
+        <div id="market-count-line-chart-svg"></div>
+        <p class="lead"> A farmers' market allows growers the opportunity to market directly to consumers without
+          dealing with a food broker. Growers can explain how the food is grown and educate consumers on how to prepare
+          it.
+          Consumers have an opportunity to put a “face” on who is growing the product, which they do not necessarily get
+          from traditional retail food outlets. This form of direct marketing is also regarded as agritourism. Consumers
+          also have the chance to purchase products that originate locally and are promoted as being “fresh.”
+        </p>
+        <div id="map-svg"></div> <!-- map code goes here -->
+        <!-- <div id="state-bar-chart-svg"></div> -->
+        <!-- bar code goes here -->
+        <p class="lead">The Farmers Market Directory lists markets that feature two or more farm vendors selling
+          agricultural products directly to customers at a common, recurrent physical location.
+          Maintained by the Agricultural Marketing Service, the Directory is designed to provide
+          customers with convenient access to information about farmers market listings to include:
+          market locations, directions, operating times, product offerings, accepted forms of payment, and more.
+        </p>
+
       </div>
-          
-
-      <footer class="footer   text-center">
-        <div class="container">
-          <p class="text-muted"></p>
-          <strong>Author <a href="https://www.linkedin.com/in/sanjaykumarmurudi/"  target="_blank">Sanjay Kumar</a></strong>
+      <div class="container">
+        <!-- /start of next page container -->
+        <div class="col-lg-12 text-center">
+          <a href="products.html">
+            <button type="button" class="btn btn-default btn-lg btn-primary">
+              <i class="fa fa-chevron-right"></i>Next
+            </button></a>
         </div>
-      </footer>
+      </div> <!-- /end of next page container -->
+    </div>
 
 
- </div> <!-- /end of main container -->
-    <!-- Bootstrap core JavaScript
+  </div> <!-- /end of main container -->
+
+
+  <footer class="footer   text-center">
+    <div class="container">
+      <p class="text-muted"></p>
+      <strong>Author <a href="https://www.linkedin.com/in/sanjaykumarmurudi/" target="_blank">Sanjay Kumar</a></strong>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.18.0/d3-annotation.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.13.0/d3-legend.js"></script>
   <script src='https://d3js.org/d3.v5.min.js'></script>
   <script src="https://d3js.org/topojson.v2.min.js"></script>
@@ -117,10 +141,11 @@
   <!-- <script src="lib/plotStatebarChart.js"></script> -->
   <script src="lib/plotMarketCountLineChart.js"></script>
   <script>
-      window.setTimeout(function() {
-         $(".alert").alert('close');
-         //$("#tooltip-alert").fadeIn();
-     }, 10000);
+    window.setTimeout(function () {
+      $(".alert").alert('close');
+      //$("#tooltip-alert").fadeIn();
+    }, 10000);
   </script>
 </body>
+
 </html>
