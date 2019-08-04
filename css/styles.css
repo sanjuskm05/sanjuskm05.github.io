@@ -71,7 +71,7 @@
   }
   .line {
     fill: none;
-    stroke: lightblue;
+    stroke: rgb(99, 116, 146);
     stroke-width: 3;
   }
     
