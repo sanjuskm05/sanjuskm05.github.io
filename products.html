@@ -17,7 +17,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/starter-template.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <title>Sanjay's Home Page</title>
+  <title>Farmers Market Data Analysis</title>
 </head>
 
 <body>
@@ -36,10 +36,10 @@
           <a class="nav-link" href="index.html">Home </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="products.html">Scene 1 - Products<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="products.html">Scene 1 - Product Offerings<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="paymentType.html" tabindex="-1">Scene 2 - Payment type</a>
+          <a class="nav-link" href="paymentType.html" tabindex="-1">Scene 2 - Payment Options</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Scene 3 - Social media presence</a>
@@ -55,10 +55,31 @@
     <!-- start of main container -->
 
     <div class="page-header">
-      <h2>Farmers Market with Products</h2>
+      <h2>Product Offerings</h2>
     </div>
 
     <div class="container">
+
+      <div class="col-lg-12">
+        <p class="lead">Farmers' market provides an opportunity for consumers to purchase products that originate
+          locally and are promoted as being “fresh”. It allows farmers the opportunity to market directly
+          to consumers without dealing with a food broker, and an opportunity to explain how the food is grown and
+          educate consumers on how to prepare it.
+        </p>
+        <p class="lead">
+          Farmers markets vary in size and always reflect a local region's agriculture and seasons. Some markets are
+          seasonal and comprised of a fewer number of farmers, while others involve hundreds of farmers and take place
+          year-round. It's a source of pride to farmers and consumers alike that the products available at
+          farmers market represent the agriculture of a region or state. Depending on the time of the year, some
+          markets concentrate on produce, while others carry everything from fruits and vegetables to baked goods,
+          meat, eggs, flowers, and dairy products. Some may carry locally made crafts or prepared foods as a complement
+          to the agricultural products they sell. As the number of markets grows, so does the variety of products
+          availibility.
+          Below chart refects the number of markets offering different produce and agricultural products accross
+          different states.
+        </p>
+      </div>
+
       <select id="states-list" onchange="onStateValueChange()">
         <option selected value="">All</option>
       </select>
@@ -67,19 +88,20 @@
       <div id="product-table-chart-svg"></div>
 
 
-      <div style="display: flex;  justify-content: center;">
-        <a href="index.html">
-          <button type="button" class="btn btn-default btn-lg btn-primary">
-            Previous<i class="fa fa-chevron-left"></i>
-          </button></a>
-        <div class="col-lg-9"></div>
-        <a href="paymentType.html">
-          <button type="button" class="btn btn-default btn-lg btn-primary">
-            <i class="fa fa-chevron-right"></i>Next
-          </button></a>
-      </div>
+
     </div>
   </div> <!-- /end of main container -->
+  <div style="display: flex;  justify-content: center;">
+    <a href="index.html">
+      <button type="button" class="btn btn-default btn-lg btn-primary">
+        Previous<i class="fa fa-chevron-left"></i>
+      </button></a>
+    <div class="col-lg-9"></div>
+    <a href="paymentType.html">
+      <button type="button" class="btn btn-default btn-lg btn-primary">
+        <i class="fa fa-chevron-right"></i>Next
+      </button></a>
+  </div>
   <footer class="footer   text-center">
     <div class="container">
       <p class="text-muted"></p>
