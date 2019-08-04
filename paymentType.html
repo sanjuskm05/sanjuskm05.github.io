@@ -39,7 +39,8 @@
           <a class="nav-link" href="products.html">Scene 1 - Product Offerings</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="paymentType.html">Scene 2 - Payment Options<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="paymentType.html">Scene 2 - Payment Options<span
+              class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="socialMediaType.html">Scene 3 - Social media presence</a>
@@ -57,7 +58,12 @@
     <div class="page-header">
       <h2>Payment options</h2>
     </div>
-
+    <div id="tooltip-alert" class="alert alert-info hide" role="alert" data-dismiss="alert">
+      <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+      <strong></strong> Tooltips and filters are available. Use your mouse to hover over any bars on the bar chart to
+      see its tooltip, and drill-down combobox to filter the information by state.
+    </div>
     <div class="container">
       <p class="lead">
         There are many ways to pay at farmers markets. Cash usually works best but many farmers markets also accept
@@ -68,8 +74,9 @@
         farmers markets has almost tripled.
       </p>
       <p class="lead">
-          Below chart refects the number of markets accepts different payment options for their agricultural products accross
-          different states.
+        Below chart refects the number of markets accepts different payment options for their agricultural products
+        accross
+        different states.
       </p>
       <select id="states-list" onchange="onStateValueChange()">
         <option selected value="">All</option>
@@ -80,15 +87,15 @@
 
   </div> <!-- /end of main container -->
   <div style="display: flex;  justify-content: center;">
-      <a href="products.html">
-        <button type="button" class="btn btn-default btn-lg btn-primary">
-          Previous<i class="fa fa-chevron-left"></i>
-        </button></a>
-      <div class="col-lg-9"></div>
-      <a href="socialMediaType.html">
-        <button type="button" class="btn btn-default btn-lg btn-primary">
-          <i class="fa fa-chevron-right"></i>Next
-        </button></a>
+    <a href="products.html">
+      <button type="button" class="btn btn-default btn-lg btn-primary">
+        Previous<i class="fa fa-chevron-left"></i>
+      </button></a>
+    <div class="col-lg-9"></div>
+    <a href="socialMediaType.html">
+      <button type="button" class="btn btn-default btn-lg btn-primary">
+        <i class="fa fa-chevron-right"></i>Next
+      </button></a>
   </div>
   <footer class="footer   text-center">
     <div class="container">

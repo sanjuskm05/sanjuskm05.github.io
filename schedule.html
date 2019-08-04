@@ -58,12 +58,26 @@
     <div class="page-header">
       <h2>Farmers Market schedule (round the year)</h2>
     </div>
-
+    <div id="tooltip-alert" class="alert alert-info hide" role="alert" data-dismiss="alert">
+      <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+      <strong></strong> Tooltips and filters are available. Use your mouse to hover over any bars on the bar chart to
+      see its tooltip, and check the checkbox to filter the information by month.
+    </div>
     <div class="container">
       <p class="lead">
         Market heavily depends on a combination of location, season, and market rules about what can be sold. Peak
         harvest season is usually peak market season, and some markets are only open in the spring, summer, and early
         autumn.
+      </p>
+      <div id="market-count-by-month-line-chart-svg"></div>
+      <br>
+      <p class="lead">
+        Roughly 15% of all farmers markets open in the winter months. Nevertheless, year-round farmers market
+        thrive in many states. Many markets are expanding their seasons or transitioning to year-round operation by
+        offering their shoppers items including meat, eggs, dairy, bread and other products that are available fresh
+        throughout the year. Even in colder climates, farmers are implementing a variety of season-extending techniques
+        that can protect crops from frosts and allow them to be picked and sold fresh for more weeks of the year.
       </p>
       <p class="lead">
         Below chart refects the number of open markets accross different states in selected month(s).
@@ -134,16 +148,9 @@
       </form>
 
       <div id="schedule-bar-chart-svg"></div>
-      <br>
-      <p class="lead">
-        Roughly 15% of all farmers markets open in the winter months. Nevertheless, year-round farmers market
-        thrive in many states. Many markets are expanding their seasons or transitioning to year-round operation by
-        offering their shoppers items including meat, eggs, dairy, bread and other products that are available fresh
-        throughout the year. Even in colder climates, farmers are implementing a variety of season-extending techniques
-        that can protect crops from frosts and allow them to be picked and sold fresh for more weeks of the year.
-      </p>
-      <br>
-      <div id="market-count-by-month-line-chart-svg"></div>
+      <div id="schedule-table-chart-svg"></div>
+
+
 
     </div>
   </div> <!-- /end of main container -->
