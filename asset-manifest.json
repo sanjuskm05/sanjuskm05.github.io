@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.08d66952.chunk.css",
-    "main.js": "/static/js/main.93ebaa22.chunk.js",
-    "main.js.map": "/static/js/main.93ebaa22.chunk.js.map",
+    "main.js": "/static/js/main.af98f08c.chunk.js",
+    "main.js.map": "/static/js/main.af98f08c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c72b35e1.js",
     "runtime-main.js.map": "/static/js/runtime-main.c72b35e1.js.map",
     "static/css/2.5544c887.chunk.css": "/static/css/2.5544c887.chunk.css",
-    "static/js/2.6782efca.chunk.js": "/static/js/2.6782efca.chunk.js",
-    "static/js/2.6782efca.chunk.js.map": "/static/js/2.6782efca.chunk.js.map",
+    "static/js/2.e6d7280a.chunk.js": "/static/js/2.e6d7280a.chunk.js",
+    "static/js/2.e6d7280a.chunk.js.map": "/static/js/2.e6d7280a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f6a80cccfddaf272f49f84f4fdd8a426.js": "/precache-manifest.f6a80cccfddaf272f49f84f4fdd8a426.js",
+    "precache-manifest.1850c15f041fcfac047dacdbbde00ed9.js": "/precache-manifest.1850c15f041fcfac047dacdbbde00ed9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.5544c887.chunk.css.map": "/static/css/2.5544c887.chunk.css.map",
     "static/css/main.08d66952.chunk.css.map": "/static/css/main.08d66952.chunk.css.map",
-    "static/js/2.6782efca.chunk.js.LICENSE.txt": "/static/js/2.6782efca.chunk.js.LICENSE.txt",
+    "static/js/2.e6d7280a.chunk.js.LICENSE.txt": "/static/js/2.e6d7280a.chunk.js.LICENSE.txt",
     "static/media/$pac.svg": "/static/media/$pac.c830fed4.svg",
     "static/media/0xbtc.svg": "/static/media/0xbtc.ca90430d.svg",
     "static/media/2give.svg": "/static/media/2give.9f370dcf.svg",
@@ -103,8 +103,6 @@
     "static/media/cnx.svg": "/static/media/cnx.4d3c68eb.svg",
     "static/media/cny.svg": "/static/media/cny.5bb0dfef.svg",
     "static/media/cob.svg": "/static/media/cob.c6669d6d.svg",
-    "static/media/coingecko.svg": "/static/media/coingecko.cac4c7a5.svg",
-    "static/media/coinpaprika.svg": "/static/media/coinpaprika.149f0aed.svg",
     "static/media/colx.svg": "/static/media/colx.94b57c1d.svg",
     "static/media/coqui.svg": "/static/media/coqui.44d784a5.svg",
     "static/media/cred.svg": "/static/media/cred.37952c78.svg",
@@ -446,8 +444,8 @@
   "entrypoints": [
     "static/js/runtime-main.c72b35e1.js",
     "static/css/2.5544c887.chunk.css",
-    "static/js/2.6782efca.chunk.js",
+    "static/js/2.e6d7280a.chunk.js",
     "static/css/main.08d66952.chunk.css",
-    "static/js/main.93ebaa22.chunk.js"
+    "static/js/main.af98f08c.chunk.js"
   ]
 }
